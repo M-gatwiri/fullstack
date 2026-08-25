@@ -21,10 +21,11 @@ app.get("/", (req,res)=>{
 });
 mongoose.connect(process.env.MONGODB_URI).then(()=>{
     console.log("Connected to database");
-    app.listen (PORT,()=>{
-    console.log (`server is running on port: http://localhost:${PORT}`)
-}) 
+//     app.listen (PORT,()=>{
+//     console.log (`server is running on port: http://localhost:${PORT}`)
+// }) 
 }).catch((error)=>{
     console.error(error); 
 })
 
+export default app

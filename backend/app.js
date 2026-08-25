@@ -11,7 +11,7 @@ import router from "./routes/product.route.js"
 //midlle ware 
 const allowedOrigin =[
     "http://localhost:5173",
-    "https://mongodb-crud-smoky-five.vercel.app/"
+    "https://mongodb-crud-smoky-five.vercel.app"
 ]
 app.use (cors({origin:allowedOrigin, credentials: true}))
 app.use (helmet())

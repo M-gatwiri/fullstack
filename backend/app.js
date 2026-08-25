@@ -9,7 +9,11 @@ import router from "./routes/product.route.js"
  const app = express()
 
 //midlle ware 
-app.use (cors())
+const allowedOrigin =[
+    "http://localhost:5173",
+    "https://mongodb-crud-smoky-five.vercel.app/"
+]
+app.use (cors({origin:allowedOrigin, credentials: true}))
 app.use (helmet())
 app.use (morgan("dev"))
 app.use (express.json())
